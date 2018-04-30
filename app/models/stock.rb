@@ -1,4 +1,7 @@
 class Stock < ActiveRecord::Base
+	has_many :user_stocks
+	has_many :users, through: :user_stocks
+
 
 	#Here we are making a method at the class level (using .self)
 	#We're creating and passing in the ticker_symbol variable 
