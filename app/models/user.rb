@@ -25,5 +25,10 @@ class User < ActiveRecord::Base
   def can_add_stock?(ticker_symbol)
   	under_stock_limit? && !stock_already_added?(ticker_symbol)
   end
-  
+
+  def full_name(first_name, last_name)
+  	return "#{first_name} #{last_name}".strip if (first_name || last_name)
+  	"Anonymous"
+  end
+
 end
