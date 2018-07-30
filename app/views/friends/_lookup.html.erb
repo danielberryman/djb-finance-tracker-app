@@ -1,9 +1,10 @@
 <h3>Search for Friends</h3>
+<h6>Search "@" to see all users</h6>
 <div id="stock-lookup">
 	<%= form_tag search_friends_path, remote: true, method: :get, id: "friend-lookup-form" do %>
 		<div class="form-group row no-padding text-center col-md-12">
 			<div class="col-md-10">
-				<%= text_field_tag :search_param, params[:search_param], placeholder: "Enter name or email", autofucs: true, class: "form-control serach-box input-lg" %>
+				<%= text_field_tag :search_param, params[:search_param], placeholder: "Enter name or email", autofocus: true, class: "form-control search-box input-lg" %>
 			</div>
 			<div class="col-md-2">
 				<%= button_tag(type: :submit, class: "btn btn-lg btn-success") do %>
